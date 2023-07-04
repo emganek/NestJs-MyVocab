@@ -8,7 +8,7 @@ async function bootstrap() {
       origin: 'http://localhost:4200'
     }
   };
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(AppModule, config);
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
